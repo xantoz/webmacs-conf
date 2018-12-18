@@ -1,1 +1,1 @@
-from . import webjumps, findurl, helpfix
+from . import webjumps, findurl, helpfix, repl
