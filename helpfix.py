@@ -8,7 +8,7 @@ def describe_binding_briefly(ctx):
     called_with = ctx.minibuffer.do_prompt(derp.BindingPrompt(ctx))
     if called_with:
         ctx.minibuffer.show_info(
-            "{key} runs the command {command} (keymap {keymap})".format(**called_with)
+            "{key} runs the command {command} (keymap: {keymap})".format(**called_with)
         )
 
 keymap("global").define_key("C-h c", "describe-key-briefly")
