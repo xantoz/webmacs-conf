@@ -34,3 +34,5 @@ define_webjump("ebay", "http://www.ebay.com/sch/i.html?_nkw=%s&_sacat=0")
 define_webjump("ebayuk", "http://www.ebay.co.uk/sch/i.html?_from=R40&_sacat=0&_nkw=%s&_sop=15")
 define_webjump("tradera", "http://www.tradera.com/search?sortBy=AddedOn&q=%s")
 define_webjump("aliexpress", "https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170712071138&SearchText=%s")
+
+define_webjump("maps", "https://www.google.com/maps/search/%s/")
