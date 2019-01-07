@@ -1,6 +1,7 @@
 import webmacs
 import os
 import pprint
+import traceback
 
 class EvalExpressionPrompt(webmacs.minibuffer.Prompt):
     label = "M-: "
@@ -23,11 +24,13 @@ def eval_expression(ctx):
     """
     prompt = EvalExpressionPrompt(ctx)
     value = ctx.minibuffer.do_prompt(prompt)
+    if not value:
+        return
     try:
         # TODO: truncate output so there isn't too many lines
         ctx.minibuffer.show_info(pprint.pformat(eval(value, {"webmacs":webmacs, "os":os})))
     except:
-        # TODO: print traceback
+        ctx.minibuffer.show_info(traceback.format_exc())
         pass
 
 webmacs.keymaps.keymap("global").define_key("M-:", "eval-expression")
