@@ -2,6 +2,7 @@ import webmacs
 import os
 import pprint
 import traceback
+import importlib
 
 class EvalExpressionPrompt(webmacs.minibuffer.Prompt):
     label = "M-: "
@@ -28,7 +29,12 @@ def eval_expression(ctx):
         return
     try:
         # TODO: truncate output so there isn't too many lines
-        ctx.minibuffer.show_info(pprint.pformat(eval(value, {"webmacs":webmacs, "os":os})))
+        ctx.minibuffer.show_info(pprint.pformat(eval(value, {
+            "webmacs": webmacs,
+            "os": os,
+            "init": __import__('init'),
+            "reload": importlib.reload,
+        })))
     except:
         ctx.minibuffer.show_info(traceback.format_exc())
         pass
