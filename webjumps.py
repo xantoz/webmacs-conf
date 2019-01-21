@@ -1,4 +1,6 @@
-from webmacs.commands.webjump import define_webjump, define_webjump_alias
+from webmacs.commands.webjump import define_webjump, define_webjump_alias, WebJumpRequestCompleter
+from PyQt5.QtCore import QUrl
+import json
 
 define_webjump_alias("ddg", "duckduckgo")
 
@@ -36,3 +38,12 @@ define_webjump("tradera", "http://www.tradera.com/search?sortBy=AddedOn&q=%s")
 define_webjump("aliexpress", "https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170712071138&SearchText=%s")
 
 define_webjump("maps", "https://www.google.com/maps/search/%s/")
+
+def complete_wikipedia():
+    return WebJumpRequestCompleter(
+        lambda text: ("https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
+                      str(QUrl.toPercentEncoding(text), "utf-8")) if text else None,
+        lambda response: json.loads(str(response, "utf-8"))[1]
+    )
+
+define_webjump("wikipedia", "https://en.wikipedia.org/wiki/Special:Search/?search=%s", complete_fn=complete_wikipedia)
