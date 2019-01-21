@@ -37,7 +37,9 @@ def eval_expression(ctx):
             "pprint": pprint.pprint,
         })))
     except:
-        ctx.minibuffer.show_info(traceback.format_exc())
+        trace = traceback.format_exc()
+        ctx.minibuffer.show_info(trace)
+        print(trace)
         pass
 
 webmacs.keymaps.keymap("global").define_key("M-:", "eval-expression")
