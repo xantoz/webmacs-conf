@@ -25,11 +25,11 @@ def where_is(ctx):
     command = ctx.minibuffer.do_prompt(WhereIsCommandsListPrompt(ctx))
     if not command:
         return
-    command_bindings = list("{} (keymap: {})".format(k, kmapname)
-                            for kmapname, kmap in webmacs.keymaps.KEYMAPS.items()
-                            for k, v in kmap.all_bindings() if v == command)
-    if command_bindings:
-        ctx.minibuffer.show_info("{} is on: {}".format(command, ", ".join(command_bindings)))
+    bindings_str = ", ".join("{} (keymap: {})".format(k, kmapname)
+                             for kmapname, kmap in webmacs.keymaps.KEYMAPS.items()
+                             for k, v in kmap.all_bindings() if v == command)
+    if bindings_str:
+        ctx.minibuffer.show_info("{} is on: {}".format(command, bindings_str))
     else:
         ctx.minibuffer.show_info("{} is not on any key".format(command))
 
