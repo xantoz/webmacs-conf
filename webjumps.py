@@ -38,6 +38,7 @@ define_webjump("tradera", "http://www.tradera.com/search?sortBy=AddedOn&q=%s")
 define_webjump("aliexpress", "https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170712071138&SearchText=%s")
 
 define_webjump("maps", "https://www.google.com/maps/search/%s/")
+define_webjump("image", "https://www.google.com/images?q=%s");
 
 def complete_wikipedia():
     return WebJumpRequestCompleter(
