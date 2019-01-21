@@ -34,6 +34,7 @@ def eval_expression(ctx):
             "os": os,
             "init": __import__('init'),
             "reload": importlib.reload,
+            "pprint": pprint.pprint,
         })))
     except:
         ctx.minibuffer.show_info(traceback.format_exc())
