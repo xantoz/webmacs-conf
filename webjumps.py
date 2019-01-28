@@ -37,6 +37,8 @@ define_webjump("ebayuk", "http://www.ebay.co.uk/sch/i.html?_from=R40&_sacat=0&_n
 define_webjump("tradera", "http://www.tradera.com/search?sortBy=AddedOn&q=%s")
 define_webjump("aliexpress", "https://www.aliexpress.com/wholesale?catId=0&initiative_id=SB_20170712071138&SearchText=%s")
 define_webjump("webhallen", "https://www.webhallen.com/se/search?searchString=%s&sort=searchRating")
+define_webjump("dustin", "https://www.dustin.se/sok/%s")
+define_webjump("dustinhome", "https://www.dustinhome.se/sok/%s")
 
 define_webjump("maps", "https://www.google.com/maps/search/%s/")
 define_webjump("image", "https://www.google.com/images?q=%s");
