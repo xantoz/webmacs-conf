@@ -39,6 +39,7 @@ define_webjump("aliexpress", "https://www.aliexpress.com/wholesale?catId=0&initi
 define_webjump("webhallen", "https://www.webhallen.com/se/search?searchString=%s&sort=searchRating")
 define_webjump("dustin", "https://www.dustin.se/sok/%s")
 define_webjump("dustinhome", "https://www.dustinhome.se/sok/%s")
+define_webjump("crunchyroll", "https://www.crunchyroll.com/search?from=&q=%s")
 
 define_webjump("maps", "https://www.google.com/maps/search/%s/")
 define_webjump("image", "https://www.google.com/images?q=%s");
