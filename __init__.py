@@ -1,1 +1,1 @@
-from . import webjumps, findurl, helpfix, repl, bindings, variables
+from . import webjumps, findurl, repl, bindings, variables
