@@ -24,7 +24,7 @@ define_webjump("surugaya", "https://www.suruga-ya.jp/search?category=&search_wor
 define_webjump("yafuoku", "https://auctions.search.yahoo.co.jp/search?p=%s&aq=-1&oq=&x=0&y=0&ei=UTF-8&slider=0&tab_ex=commerce&auccat=")
 define_webjump("amazon", "https://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%s")
 define_webjump("sfx", "https://thejadednetwork.com/sfx/search/?keyword=%s&submitSearch=Search+SFX&x=")
-define_webjump("mangasfx", "https://thejadednetwork.com/sfx/search/?keyword=%s&submitSearch=Search+SFX&x=")
+define_webjump("mangasfx", "http://thejadednetwork.com/sfx/search/?keyword=%s&submitSearch=Search+SFX&x=")
 define_webjump("jisho", "http://classic.jisho.org/words?jap=%s&eng=&dict=edict") # Note: Must be HTTP
 #define_webjump("jisho", "https://jisho.org/search/%s")
 define_webjump("anidb", "https://anidb.net/perl-bin/animedb.pl?adb.search=%s&show=search&do.search=search")
