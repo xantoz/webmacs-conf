@@ -43,3 +43,5 @@ def eval_expression(ctx):
         pass
 
 webmacs.keymaps.keymap("global").define_key("M-:", "eval-expression")
+# webmacs.keymaps.keymap("global").define_key("Esc :", "eval-expression")
+webmacs.keymaps.keymap("global").define_key("M-;", "eval-expression")
